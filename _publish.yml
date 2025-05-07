@@ -1,0 +1,4 @@
+- source: learning-webr.qmd
+  quarto-pub:
+    - id: fd4cb2c6-092d-465a-8bc9-133358bdfe4e
+      url: 'https://maria.quarto.pub/learning-webr'
