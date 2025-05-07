@@ -1,0 +1,76 @@
+---
+title: "Learning webR"
+filters: 
+  - webr
+---
+
+# Introduction
+
+Welcome!
+
+## Set up
+
+We have already loaded the R packages you need for this tutorial. Once you start working in RStudio, you will run code like the code shown below to load the R packages you need.
+
+```{r}
+#| eval: false
+
+library(tidyverse)
+library(palmerpenguins)
+library(nycflights13)
+```
+
+```{webr-r}
+#| context: setup
+
+library(tidyverse)
+library(palmerpenguins)
+library(nycflights13)
+```
+
+# Exercises
+
+All exercises are from [R for Data Science 2nd Edition](https://r4ds.hadley.nz/).
+
+## Visualization 
+
+### [Ex 5 in Section 1.5.5](https://r4ds.hadley.nz/data-visualize.html#exercises-2)
+
+```{webr-r}
+
+ggplot(data = penguins, aes(x = bill_depth_mm, y = bill_length_mm,
+                            color = species)) + 
+  geom_point() 
+```
+
+## [Ex 1 in Section 1.4.3](https://r4ds.hadley.nz/data-visualize.html#exercises-1)
+
+Fill in the blank to make a barplot of `species`, such that `species` is assigned to the y aesthetic.
+
+```{webr-r}
+ggplot(data = penguins, aes(y = _____)) + 
+  geom_bar()
+```
+
+## Data wrangling
+
+### [Ex 3 in Section 3.5.7](https://r4ds.hadley.nz/data-transform.html#exercises-2)
+
+```{webr-r}
+
+flights |>
+  group_by(dep_time) |> 
+  summarize(mean_delay = mean(dep_delay)) |>
+  ggplot(aes(x = dep_time, y = mean_delay)) + 
+  geom_point()
+```
+
+# Open code chunk
+
+Here is an open code chunk to play around with more R code.
+
+```{webr-r}
+# add your code here
+
+
+```
